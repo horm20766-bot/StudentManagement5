@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Student Management Dashboard</title>
+    <title>StudentHub - Student Management Dashboard</title>
     <meta name="theme-color" content="#2563eb">
+    <meta name="description" content="Manage student records with StudentHub.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -46,6 +47,7 @@
 
         <div class="sidebar-bottom">
             <p class="nav-label">PREFERENCES</p>
+
             <a href="#contact" class="nav-link">
                 <span class="nav-icon">⚙</span>
                 <span>Settings / Contact</span>
@@ -243,6 +245,7 @@
                                 placeholder="Enter age"
                                 min="1"
                                 max="120"
+                                step="1"
                                 required
                             >
                         </div>
@@ -259,11 +262,20 @@
                         </div>
 
                         <div class="form-buttons">
-                            <button type="submit" id="submitBtn" class="primary-button">
+                            <button
+                                type="submit"
+                                id="submitBtn"
+                                class="primary-button"
+                            >
                                 Add Student
                             </button>
 
-                            <button type="button" id="cancelEditBtn" class="secondary-button" hidden>
+                            <button
+                                type="button"
+                                id="cancelEditBtn"
+                                class="secondary-button"
+                                hidden
+                            >
                                 Cancel
                             </button>
                         </div>
@@ -304,10 +316,18 @@
                     </table>
                 </div>
 
-                <p id="message" class="status-message" role="status" aria-live="polite"></p>
+                <p
+                    id="message"
+                    class="status-message"
+                    role="status"
+                    aria-live="polite"
+                ></p>
 
+                <!-- DATABASE STATUS TEXT -->
                 <div class="table-footer">
-                    <span>Student records are saved in this browser.</span>
+                    <span>
+                        Student records are saved in the online database.
+                    </span>
                     <a href="#dashboard">Back to top ↑</a>
                 </div>
 
@@ -317,9 +337,12 @@
             <section class="panel contact-panel" id="contact">
                 <div class="panel-heading">
                     <div>
-                        <h2>Contact & Messages</h2>
-                        <p>Send a message to your connected Telegram chat.</p>
+                        <h2>Contact &amp; Messages</h2>
+                        <p>
+                            Send a message to your connected Telegram chat.
+                        </p>
                     </div>
+
                     <span class="telegram-label">✉ Telegram</span>
                 </div>
 
@@ -351,10 +374,19 @@
                     </div>
 
                     <div class="contact-submit-row">
-                        <button type="submit" id="sendBtn" class="primary-button">
+                        <button
+                            type="submit"
+                            id="sendBtn"
+                            class="primary-button"
+                        >
                             Send Message →
                         </button>
-                        <p id="formStatus" role="status" aria-live="polite"></p>
+
+                        <p
+                            id="formStatus"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
                     </div>
 
                 </form>
